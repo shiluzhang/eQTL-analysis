@@ -56,7 +56,7 @@ Let B and R denote the two alleles in the cross, and let μ ̂_BB, μ ̂_BR and 
 a^2+b^2=c^2
 ```
 
-a ̂=(μ ̂_RR-μ ̂_BB)/2
+$a ̂=(μ ̂_RR-μ ̂_BB)/2$
 The dominance effect (d) is the deviation of the heterozygote BR from the midpoint of the two homozygotes (BB, RR), estimated as:
 d ̂=μ ̂_BR-(μ ̂_RR+μ ̂_BB)/2
 For a given QTL model based on Haley-Knott regression, we have 
