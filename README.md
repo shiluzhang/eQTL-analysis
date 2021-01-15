@@ -15,34 +15,29 @@ Combining the gene expression microarray data on six tissues with the genotype d
 
 ## 2. Methods:
 ### 2.1 Genotyping data:
-To identify genes and pathways that cause obesity-induced type II diabetes, two different mouse lines: C57BL/6J (abbreviated B6 or B) and BTBR T+ tf/J (abbreviated BTBR or R) mice were used to conduct an intercross. B6 mice are resistant to diabetes, while BTBR mice are susceptible to diabetes. BTBR females were crossed to B6 males to generate F1 heterozygotes, and F1 parents were crossed to generate F2 mice. All mice were genetically obese through introgression of the leptin mutation Lepob/ob. F2 mice were genotyped with the 5K GeneChip (Affymetrix).
-  
-Totally, there were 519 F2 mice genotyped at 2057 informative markers. There were three phenotypes in F2 mice, BB (homozygous B6), BR (heterozygous) and RR (homozygous BTBR). 
+To identify genes and pathways that cause obesity-induced type II diabetes, two different mouse lines: C57BL/6J (abbreviated B6 or B) and BTBR T+ tf/J (abbreviated BTBR or R) mice were used to conduct an intercross. B6 mice are resistant to diabetes, while BTBR mice are susceptible to diabetes. BTBR females were crossed to B6 males to generate F1 heterozygotes, and F1 parents were crossed to generate F2 mice. All mice were genetically obese through introgression of the leptin mutation Lepob/ob. F2 mice were genotyped with the 5K GeneChip (Affymetrix). Totally, there were 519 F2 mice genotyped at 2057 informative markers. There were three phenotypes in F2 mice, BB (homozygous B6), BR (heterozygous) and RR (homozygous BTBR). 
+
 Below is an example of part of the genotyping data. Mouse3051 is one of the 519 F2 mice. rs13475697, rs3681603, rs13475703, and rs13475710 are four of the 2,057 informative markers. The first row denotes which of the chromosomes each marker is on. The second row is the position of the marker on that chromosome in centimorgan (cM). (A centiMorgan (cM) is a unit of recombinant frequency which is used to measure genetic distance.)
 
-| MouseNum  | Sex | rs13475697 | rs3681603 |
-| ------------- | ------------- |------------- | ------------- |
-|   |   | 1 | 1 | 
-|   |   | 1.6449 | 1.648 | 
-| Mouse3051  | Male  | RR | RR | 
-| Mouse3551  | Male  | BR | BR |
+| MouseNum  | Sex | rs13475697 | rs3681603 | rs13475703	| rs13475710 |
+| ------------- | ------------- |------------- | ------------- |------------- | ------------- |
+|   |   | 1 | 1 | 1 | 1 | 
+|   |   | 1.6449 | 1.648 | 1.86 | 2.078| 
+| Mouse3051  | Male  | RR | RR | RR | RR | 
+| Mouse3551  | Male  | BR | BR |BR | BR |
 
 Table 1: An example of part of the genotyping data.
 
 ### 2.2 Gene expression data:
 Gene expression was assayed with custom two-color, ink-jet microarrays manufactured by Agilent Technologies (Palo Alto, CA). RNA preparations were performed at Rosetta Inpharmatics (Merck & Co.). Six tissues from F2 mice were considered for expression profiling: adipose, gastrocnemius muscle, hypothalamus, pancreatic islets, liver, and kidney. Tissue-specific messenger RNA (mRNA) pools for each tissue were used for the reference channel, and gene expression was quantified as the ratio of the mean log10 intensity (mlratio). In the datasets, there were 519 mice with gene expression data on at least one of the six tissues (487 mice for adipose, 490 mice for gastrocnemius muscle, 369 mice for hypothalamus, 491 mice for pancreatic islets, 474 mice for kidney, and 483 mice for liver). The microarray included 37,827 probes, and we focused on the 36,364 probes with known location on the autosomes.
+
 Below is an example of part of the gene expression data. Mouse3051 is one of the 519 F2 mice. In the header row, 497628, 497629, 497630, 497632 and 497637 are some of the 36,364 probes. For each row, the values are the ratio of the mean log10 intensity (mlratio).
 
-MouseNum	497628	497629	497630	497632	497637	…
-Mouse3051	0.5912	0.02161	-0.08041	-0.00478	0.2248	
-Mouse3551	0.626	0.000572	-0.06688	-0.2142	-0.07748	
-Mouse3430	0.4032	-0.1661	0.06419	-0.04893	0.1035	
-Mouse3476	0.171	0.0443	-0.0014	-0.03564	-0.02144	
-Mouse3414	0.3791	0.004593	0.005694	0.03407	-0.0263	
-Mouse3145	0.4721	-0.06637	-0.03661	-0.1118	0.09154	
-Mouse3656	2	0.2183	0.06534	-0.08413	0.8131	
-Mouse3242	-0.1436	0.03804	0.02287	-0.04321	-0.1511	
-…						
+|MouseNum|	497628|	497629|	497630|	497632|	497637|
+| ------------- | ------------- |------------- | ------------- |------------- | ------------- |
+|Mouse3051|	0.5912|	0.02161|	-0.08041|	-0.00478|	0.2248|
+|Mouse3551|	0.626|	0.000572|	-0.06688|	-0.2142| -0.07748|	
+					
 Table 2: An example of part of the expression data.
 
 ### 2.3 QTL analysis
