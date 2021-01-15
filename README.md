@@ -20,25 +20,16 @@ To identify genes and pathways that cause obesity-induced type II diabetes, two 
 Totally, there were 519 F2 mice genotyped at 2057 informative markers. There were three phenotypes in F2 mice, BB (homozygous B6), BR (heterozygous) and RR (homozygous BTBR). 
 Below is an example of part of the genotyping data. Mouse3051 is one of the 519 F2 mice. rs13475697, rs3681603, rs13475703, and rs13475710 are four of the 2,057 informative markers. The first row denotes which of the chromosomes each marker is on. The second row is the position of the marker on that chromosome in centimorgan (cM). (A centiMorgan (cM) is a unit of recombinant frequency which is used to measure genetic distance.)
 
-MouseNum	Sex	rs13475697	rs3681603	rs13475703	rs13475710	…
-		1	1	1	1	
-		1.6449	1.648	1.86	2.078	
-Mouse3051	Male	RR	RR	RR	RR	
-Mouse3551	Male	BR	BR	BR	BR	
-Mouse3476	Male	BR	BR	BR	BR	
-Mouse3414	Male	RR	RR	RR	RR	
-Mouse3145	Female	BR	BR	BR	BR	
-…						
-| MouseNum  | Sex | rs13475697 | rs3681603
-| ------------- | ------------- |
-|   |   | 1 | 1
-|   |   | 1.6449 | 1.648
-| Mouse3051  | Male  | RR | RR
-| Mouse3551  | Male  | BR | BR
+| MouseNum  | Sex | rs13475697 | rs3681603 |
+| ------------- | ------------- |------------- | ------------- |
+|   |   | 1 | 1 | 
+|   |   | 1.6449 | 1.648 | 
+| Mouse3051  | Male  | RR | RR | 
+| Mouse3551  | Male  | BR | BR |
 
 Table 1: An example of part of the genotyping data.
 
-	Gene expression data:
+### 2.2 Gene expression data:
 Gene expression was assayed with custom two-color, ink-jet microarrays manufactured by Agilent Technologies (Palo Alto, CA). RNA preparations were performed at Rosetta Inpharmatics (Merck & Co.). Six tissues from F2 mice were considered for expression profiling: adipose, gastrocnemius muscle, hypothalamus, pancreatic islets, liver, and kidney. Tissue-specific messenger RNA (mRNA) pools for each tissue were used for the reference channel, and gene expression was quantified as the ratio of the mean log10 intensity (mlratio). In the datasets, there were 519 mice with gene expression data on at least one of the six tissues (487 mice for adipose, 490 mice for gastrocnemius muscle, 369 mice for hypothalamus, 491 mice for pancreatic islets, 474 mice for kidney, and 483 mice for liver). The microarray included 37,827 probes, and we focused on the 36,364 probes with known location on the autosomes.
 Below is an example of part of the gene expression data. Mouse3051 is one of the 519 F2 mice. In the header row, 497628, 497629, 497630, 497632 and 497637 are some of the 36,364 probes. For each row, the values are the ratio of the mean log10 intensity (mlratio).
 
@@ -54,8 +45,7 @@ Mouse3242	-0.1436	0.03804	0.02287	-0.04321	-0.1511
 …						
 Table 2: An example of part of the expression data.
 
-
-	QTL analysis
+### 2.3 QTL analysis
 We calculated multipoint genotype probabilities at all genetic markers and at a set of pseudomarkers inserted into marker intervals (Table 3). The positions of pseudomarkers were placed at evenly spaced locations between markers, with a maximum spacing of 0.5 cM between adjacent markers or pseudomarkers (Broman et al., 2015). The conditional genotype probabilities were calculated using a hidden Markov model assuming a genotyping error rate of 0.2%, and with genetic distances converted to recombination fractions with the Carter-Falconer map function (CARTER & FALCONER, 1951).
 	PBB	PBR	PRR
 Mouse3051	1.0000	0.0000	0.0000
