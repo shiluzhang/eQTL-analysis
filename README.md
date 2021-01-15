@@ -1,5 +1,5 @@
-# eQTL-analysis
-Expression QTL analysis in expression genetic data
+# Expression QTL analysis in expression genetic data
+
 
 
 ## 1. Introduction
