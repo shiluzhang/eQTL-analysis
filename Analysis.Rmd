@@ -5,33 +5,34 @@ output:
     df_print: paged
 ---
 
-# 1. install some packages
+# Expression QTL analysis in expression genetic data
 
 ```{r}
 ############################################################
 # 1. install some packages
 ############################################################
 setwd("/Users/shiluzhang/Box/UWResearch/Rotations/Rotation2/")
-# install.packages("qtl")
-# install.packages("lineup")
+install.packages("qtl")
+install.packages("lineup")
 
 ############################################################
 # 2. Download data
 ############################################################
 ## The data are at https://phenome.jax.org/projects/Attie1 
-# zipurl <- "https://phenomedoc.jax.org/QTL_Archive/attie_2015/Attie_2015_eqtl_clean.zip"
-# dir_for_data <- "Attie_data"
-# zipfile <- file.path(dir_for_data, "Attie_2015_eqtl_clean.zip")
-# 
-# # check if directory exists; if not, create it
-# if(!dir.exists(dir_for_data))
-#   dir.create(dir_for_data)
-# download.file(zipurl, zipfile) # about 913 MB
-# 
-# unzipped <- unzip(zipfile, exdir=dir_for_data) # about 2.6 GB expanded
-# 
-# ## data gets placed in "Clean" subdirectory
-# data_dir <- file.path(dir_for_data, "Clean")
+zipurl <- "https://phenomedoc.jax.org/QTL_Archive/attie_2015/Attie_2015_eqtl_clean.zip"
+dir_for_data <- "Attie_data"
+zipfile <- file.path(dir_for_data, "Attie_2015_eqtl_clean.zip")
+
+# check if directory exists; if not, create it
+if(!dir.exists(dir_for_data))
+  dir.create(dir_for_data)
+download.file(zipurl, zipfile) # about 913 MB
+
+unzipped <- unzip(zipfile, exdir=dir_for_data) # about 2.6 GB expanded
+
+## data gets placed in "Clean" subdirectory
+data_dir <- file.path(dir_for_data, "Clean")
+
 
 ############################################################
 # 3. load data
