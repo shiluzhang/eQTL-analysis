@@ -53,14 +53,16 @@ We considered each of the six tissues individually and focused on the 36,364 pro
 ### 2.4 Regression model
 Let B and R denote the two alleles in the cross, and let μ ̂_BB, μ ̂_BR and μ ̂_RR denote the average gene expression levels for genotypes BB, BR, and RR, respectively. Additive effect (a) provides a measure of the degree of change in the expression level that occurs with the substitution of R allele for B allele. The estimated additive effect is half the difference in the expression level between the two homozygotes BB and RR: 
 ```math
-a^2+b^2=c^2
+a ̂=(μ ̂_RR-μ ̂_BB)/2
 ```
-
-$a ̂=(μ ̂_RR-μ ̂_BB)/2$
 The dominance effect (d) is the deviation of the heterozygote BR from the midpoint of the two homozygotes (BB, RR), estimated as:
+```math
 d ̂=μ ̂_BR-(μ ̂_RR+μ ̂_BB)/2
+```
 For a given QTL model based on Haley-Knott regression, we have 
+```math
 Y=Xβ+ϵ
+```
 where Y is an n×1 vector of expression levels, with n as the number of F2 individuals. 
 X is an n×3 matrix of covariates: 
 X=■(( 1 ⃑&((P_RR-P_BB))/2&P_BR-((P_RR+P_BB))/2) )
