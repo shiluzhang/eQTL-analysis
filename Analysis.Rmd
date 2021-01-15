@@ -11,7 +11,6 @@ output:
 ############################################################
 # 1. install some packages
 ############################################################
-setwd("/Users/shiluzhang/Box/UWResearch/Rotations/Rotation2/")
 install.packages("qtl")
 install.packages("lineup")
 
