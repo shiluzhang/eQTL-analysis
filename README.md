@@ -42,18 +42,20 @@ Table 2: An example of part of the expression data.
 
 ### 2.3 QTL analysis
 We calculated multipoint genotype probabilities at all genetic markers and at a set of pseudomarkers inserted into marker intervals (Table 3). The positions of pseudomarkers were placed at evenly spaced locations between markers, with a maximum spacing of 0.5 cM between adjacent markers or pseudomarkers (Broman et al., 2015). The conditional genotype probabilities were calculated using a hidden Markov model assuming a genotyping error rate of 0.2%, and with genetic distances converted to recombination fractions with the Carter-Falconer map function (CARTER & FALCONER, 1951).
-	PBB	PBR	PRR
-Mouse3051	1.0000	0.0000	0.0000
-Mouse3551	0.0000	0.0000	1.0000
-Mouse3430	0.0000	1.0000	0.0000
-Mouse3476	0.0000	1.0000	0.0000
-Mouse3414	0.0000	0.0000	1.0000
-Mouse3145
-…	1.0000	0.0000	0.0000
+|	|PBB	|PBR	|PRR|
+| ------------- | ------------- |------------- | ------------- |
+|Mouse3051	|1.0000	|0.0000	|0.0000|
+|Mouse3551	|0.0000	|0.0000	|1.0000|
 Table 3: An example for genotype probabilities at genetic markers and pseudomarkers. 
+
 We considered each of the six tissues individually and focused on the 36,364 probes with known genomic location on the autosomes, and then identified the nearest marker or pseudomarker to the location of the probe, and using Haley-Knott regression (Haley & Knott, 1992) with sex included as an interactive covariate to estimate the association between genotype at that location and the gene expression of that probe. 
-	Regression model
+
+### 2.4 Regression model
 Let B and R denote the two alleles in the cross, and let μ ̂_BB, μ ̂_BR and μ ̂_RR denote the average gene expression levels for genotypes BB, BR, and RR, respectively. Additive effect (a) provides a measure of the degree of change in the expression level that occurs with the substitution of R allele for B allele. The estimated additive effect is half the difference in the expression level between the two homozygotes BB and RR: 
+```math
+a^2+b^2=c^2
+```
+
 a ̂=(μ ̂_RR-μ ̂_BB)/2
 The dominance effect (d) is the deviation of the heterozygote BR from the midpoint of the two homozygotes (BB, RR), estimated as:
 d ̂=μ ̂_BR-(μ ̂_RR+μ ̂_BB)/2
