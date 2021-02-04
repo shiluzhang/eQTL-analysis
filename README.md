@@ -47,6 +47,7 @@ We calculated multipoint genotype probabilities at all genetic markers and at a 
 | ------------- | ------------- |------------- | ------------- |
 |Mouse3051	|1.0000	|0.0000	|0.0000|
 |Mouse3551	|0.0000	|0.0000	|1.0000|
+
 Table 3: An example for genotype probabilities at genetic markers and pseudomarkers. 
 
 We considered each of the six tissues individually and focused on the 36,364 probes with known genomic location on the autosomes, and then identified the nearest marker or pseudomarker to the location of the probe, and using Haley-Knott regression (Haley & Knott, 1992) with sex included as an interactive covariate to estimate the association between genotype at that location and the gene expression of that probe. 
